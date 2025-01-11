@@ -18,17 +18,102 @@ VALUES
     ('Разделение', 2022, 'Триллеры', 'assets/serials/razdel.webp'),
     ('Видеть', 2019, 'Приключение', 'assets/serials/vision.webp');
 
+CREATE TABLE movies (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    year TEXT NOT NULL,
+    genre INTEGER NOT NULL,
+    image_path TEXT NOT NULL
+);
+INSERT INTO movies (title, year, genre, image_path)
+VALUES
+    ('Тед Лассо', 2020, 'Комедии', 'assets/serials/tedlasso.webp'),
+    ('Укрытие', 2023, 'Научная фантастика', 'assets/serials/shelter.webp'),
+    ('Терапия', 2023, 'Комедии', 'assets/serials/therapy.webp'),
+    ('Заговор систер Гарви', 2023, 'Драма', 'assets/serials/sistersGarvi.webp'),
+    ('Все совпадения', 2023, 'Триллеры', 'assets/serials/coincidences.webp'),
+    ('Основание', 2021, 'Научная фантастика', 'assets/serials/footing.webp'),
+    ('Медленные лошади', 2023, 'Триллер', 'assets/serials/slow.webp'),
+    ('Прошлое', 2023, 'Триллер', 'assets/serials/past.webp'),
+    ('Разделение', 2022, 'Триллеры', 'assets/serials/razdel.webp'),
+    ('Видеть', 2019, 'Приключение', 'assets/serials/vision.webp');
+
+CREATE TABLE dramas (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    year TEXT NOT NULL,
+    genre INTEGER NOT NULL,
+    image_path TEXT NOT NULL
+);
+INSERT INTO dramas (title, year, genre, image_path)
+VALUES
+    ('Тед Лассо', 2020, 'Комедии', 'assets/serials/tedlasso.webp'),
+    ('Укрытие', 2023, 'Научная фантастика', 'assets/serials/shelter.webp'),
+    ('Терапия', 2023, 'Комедии', 'assets/serials/therapy.webp'),
+    ('Заговор систер Гарви', 2023, 'Драма', 'assets/serials/sistersGarvi.webp'),
+    ('Все совпадения', 2023, 'Триллеры', 'assets/serials/coincidences.webp'),
+    ('Основание', 2021, 'Научная фантастика', 'assets/serials/footing.webp'),
+    ('Медленные лошади', 2023, 'Триллер', 'assets/serials/slow.webp'),
+    ('Прошлое', 2023, 'Триллер', 'assets/serials/past.webp'),
+    ('Разделение', 2022, 'Триллеры', 'assets/serials/razdel.webp'),
+    ('Видеть', 2019, 'Приключение', 'assets/serials/vision.webp');
+
+CREATE TABLE fighters (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    year TEXT NOT NULL,
+    genre INTEGER NOT NULL,
+    image_path TEXT NOT NULL
+);
+INSERT INTO fighters (title, year, genre, image_path)
+VALUES
+    ('Тед Лассо', 2020, 'Комедии', 'assets/serials/tedlasso.webp'),
+    ('Укрытие', 2023, 'Научная фантастика', 'assets/serials/shelter.webp'),
+    ('Терапия', 2023, 'Комедии', 'assets/serials/therapy.webp'),
+    ('Заговор систер Гарви', 2023, 'Драма', 'assets/serials/sistersGarvi.webp'),
+    ('Все совпадения', 2023, 'Триллеры', 'assets/serials/coincidences.webp'),
+    ('Основание', 2021, 'Научная фантастика', 'assets/serials/footing.webp'),
+    ('Медленные лошади', 2023, 'Триллер', 'assets/serials/slow.webp'),
+    ('Прошлое', 2023, 'Триллер', 'assets/serials/past.webp'),
+    ('Разделение', 2022, 'Триллеры', 'assets/serials/razdel.webp'),
+    ('Видеть', 2019, 'Приключение', 'assets/serials/vision.webp');
+
+CREATE TABLE comedies (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    year TEXT NOT NULL,
+    genre INTEGER NOT NULL,
+    image_path TEXT NOT NULL
+);
+INSERT INTO comedies (title, year, genre, image_path)
+VALUES
+    ('Тед Лассо', 2020, 'Комедии', 'assets/serials/tedlasso.webp'),
+    ('Укрытие', 2023, 'Научная фантастика', 'assets/serials/shelter.webp'),
+    ('Терапия', 2023, 'Комедии', 'assets/serials/therapy.webp'),
+    ('Заговор систер Гарви', 2023, 'Драма', 'assets/serials/sistersGarvi.webp'),
+    ('Все совпадения', 2023, 'Триллеры', 'assets/serials/coincidences.webp'),
+    ('Основание', 2021, 'Научная фантастика', 'assets/serials/footing.webp'),
+    ('Медленные лошади', 2023, 'Триллер', 'assets/serials/slow.webp'),
+    ('Прошлое', 2023, 'Триллер', 'assets/serials/past.webp'),
+    ('Разделение', 2022, 'Триллеры', 'assets/serials/razdel.webp'),
+    ('Видеть', 2019, 'Приключение', 'assets/serials/vision.webp');
+
+
+
+
+
 
 CREATE TABLE actors ( id SERIAL PRIMARY KEY, name VARCHAR(255), role VARCHAR(255) );
 INSERT INTO actors (name, role) VALUES ('Джейсон Судейкис', 'Ted Lasso'), ('Ханна Уоддингем', 'Rebecca'), ('Джуно Темпл', 'Keeley'), ('Джереми Свифт', 'Higgins'), ('Фил Данстер', 'Jamie'), ('Бретт Голдстин', 'Roy'), ('Брендан Хант', 'Coach Beard'), ('Ник Мохаммед', 'Nathan'), ('Сара Найлз', 'Sharon'), ('Билл Лоуренс', 'Исп. продюсер');
 
 
-
 CREATE TABLE movies_details ( id SERIAL PRIMARY KEY, title VARCHAR(255), year INT, genre VARCHAR(255), description TEXT, trailer_path VARCHAR(255), -- Путь к видео трейлеру image_path VARCHAR(255), -- Путь к изображению release_year INT, rating VARCHAR(10), country VARCHAR(255) );
-
-
 INSERT INTO movies_details (title, year, genre, description, trailer_path, image_path, release_year, rating, country) VALUES ('Тед Лассо', 2020, 'Комедия', 'Сериал получил 13 премий «Эмми», в том числе два года подряд (2021 и 2022) признавался Лучшим Комедийным сериалом. Джейсон Судейкис играет американского тренера, работающего с английской футбольной командой. Недостаток знаний он компенсирует оптимизмом... и печеньками', 'assets/tralers/tedlasso.MP4', 'assets/images/tedlasso.jpg', 2020, '18+', 'Великобритания');
 
-
+CREATE TABLE trailers ( id SERIAL PRIMARY KEY, id_movie INT, trailer_url VARCHAR(255) );
+INSERT INTO trailers (id, id_movie, trailer_url)
+VALUES
+    (1, 1,'assets//tedlasso.webp'),
+    ('Укрытие', 2023, 'Научная фантастика', 'assets/tralers/tedlasso.MP4');
 
 
